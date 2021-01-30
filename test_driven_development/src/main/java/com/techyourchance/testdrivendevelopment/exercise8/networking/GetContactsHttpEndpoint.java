@@ -10,13 +10,13 @@ public interface GetContactsHttpEndpoint {
     }
 
     interface Callback {
-        void onGetContactsSucceeded(List<ContactSchema> cartItems);
+        void onGetContactsSucceeded(List<ContactSchema> contactSchemas);
         void onGetContactsFailed(FailReason failReason);
     }
 
     /**
      * @param filterTerm filter term to match in any of the contact fields
-     * @param callback object to be notified when the request completes
+     * @param callback   object to be notified when the request completes
      */
     public void getContacts(String filterTerm, Callback callback);
 }
